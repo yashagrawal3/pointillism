@@ -1,0 +1,9 @@
+[Activity]
+name = Pointillism 
+activity_version = 3
+host_version = 1
+bundle_id = org.laptop.community.Pointillism
+icon = activity
+exec = sugar-activity activity.Activity
+license = GPLv3+
+
