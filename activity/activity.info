@@ -1,9 +1,8 @@
 [Activity]
 name = Pointillism 
 activity_version = 4
-host_version = 1
 bundle_id = org.laptop.community.Pointillism
-class = activity.Activity
+exec = sugar-activity activity.Activity
 show_launcher = yes
 icon = activity
 license = GPLv3+
