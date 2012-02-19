@@ -67,7 +67,7 @@ class Activity(activity.Activity):
 
         item1 = gtk.ToolItem()
         self.label_radio1 = gtk.Label()
-        self.label_radio1.set_text(_('Circles between '))
+        self.label_radio1.set_text(_('Circles between') + ' ')
         item1.add(self.label_radio1)
         toolbar.insert(item1, 2)
 
@@ -82,7 +82,7 @@ class Activity(activity.Activity):
 
         item3 = gtk.ToolItem()
         self.label_and = gtk.Label()
-        self.label_and.set_text(_(' and '))
+        self.label_and.set_text(' ' + _('and') + ' ')
         item3.add(self.label_and)
         toolbar.insert(item3, 4)
 
