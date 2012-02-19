@@ -117,7 +117,7 @@ class Activity(activity.Activity):
 
     def save_image(self,image):
         journalobj = datastore.create()
-        journalobj.metadata['title'] = 'Pointillism'
+        journalobj.metadata['title'] = _('Pointillism')
         journalobj.metadata['mime_type'] = 'image/jpeg'
 
         #file_path = os.path.join(olpcgames.ACTIVITY.get_activity_root(),'instance','pointillism.jpg')
