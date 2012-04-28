@@ -59,6 +59,9 @@ class Puntillism():
         screen.fill((0,0,0))
         pygame.display.flip()
 
+        x_s, y_s = (1200, 900)
+        x_s, y_s = screen.get_size()
+
         clock = pygame.time.Clock()
 
         cam = camera.Camera("/dev/video0", (640, 480), "RGB")
@@ -81,7 +84,7 @@ class Puntillism():
                 elif self.radio1 == self.radio2:
                     self.radio2 = self.radio2 + 1
                 num = random.randrange(self.radio1, self.radio2, 1)
-                rect.append(pygame.draw.circle(screen, cap.get_at((int(x * 640), int(y * 480))), (int(x * 1200), int(y * 900)), num, 0))
+                rect.append(pygame.draw.circle(screen, cap.get_at((int(x * 640), int(y * 480))), (int(x * x_s), int(y * y_s)), num, 0))
             pygame.display.update(rect)
 
             clock.tick()
