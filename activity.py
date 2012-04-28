@@ -30,10 +30,13 @@ import pygame
 import sugargame
 import sugargame.canvas
 from sugar.activity import activity
+from sugar.graphics.toolbarbox import ToolbarBox
+from sugar.activity.widgets import ActivityToolbarButton
+from sugar.activity.widgets import StopButton
 from sugar.graphics.toolbutton import ToolButton
 from sugar.datastore import datastore
-from sugar.graphics.toolbutton import ToolButton
 from gettext import gettext as _
+
 import puntillism
 
 class Activity(activity.Activity):
@@ -53,23 +56,30 @@ class Activity(activity.Activity):
 
     def build_toolbar(self):
 
-        caja = activity.ActivityToolbox(self)
+        self.max_participants = 1
+        
+        toolbox = ToolbarBox()
+        activity_button = ActivityToolbarButton(self)
+        toolbox.toolbar.insert(activity_button, -1)
+        activity_button.show()
 
-        toolbar = caja.get_activity_toolbar()
+        barra = toolbox.toolbar
+
+        """toolbar = caja.get_activity_toolbar()
         toolbar.remove(toolbar.keep)
         toolbar.keep = None
         toolbar.remove(toolbar.share)
-        toolbar.share = None
+        toolbar.share = None"""
 
         separador1 = gtk.SeparatorToolItem()
         separador1.props.draw = True
-        toolbar.insert(separador1, 1)
+        barra.insert(separador1, 1)
 
         item1 = gtk.ToolItem()
         self.label_radio1 = gtk.Label()
         self.label_radio1.set_text(_('Circles between') + ' ')
         item1.add(self.label_radio1)
-        toolbar.insert(item1, 2)
+        barra.insert(item1, 2)
 
         item2 = gtk.ToolItem()
         self.cradio1 = gtk.SpinButton()
@@ -78,13 +88,13 @@ class Activity(activity.Activity):
         self.cradio1.props.value = self.radio_uno
         self.cradio1_handler = self.cradio1.connect('notify::value', self.cradio1_valor)
         item2.add(self.cradio1)
-        toolbar.insert(item2, 3)
+        barra.insert(item2, 3)
 
         item3 = gtk.ToolItem()
         self.label_and = gtk.Label()
         self.label_and.set_text(' ' + _('and') + ' ')
         item3.add(self.label_and)
-        toolbar.insert(item3, 4)
+        barra.insert(item3, 4)
 
         item4 = gtk.ToolItem()
         self.cradio2 = gtk.SpinButton()
@@ -93,16 +103,18 @@ class Activity(activity.Activity):
         self.cradio2.props.value = self.radio_dos
         self.cradio2_handler = self.cradio2.connect('notify::value', self.cradio2_valor)
         item4.add(self.cradio2)
-        toolbar.insert(item4, 5)
+        barra.insert(item4, 5)
 
-        savebutton = ToolButton('filesave')
-        savebutton.set_tooltip(_('Save Image'))
-        savebutton.connect('clicked',self._savebutton_cb)
-        toolbar.insert(savebutton, 7)
-        #savebutton.show()
+        """
+        save_button = ToolButton('filesave')
+        save_button.set_tooltip(_('Save Image'))
+        save_button.connect('clicked', self._savebutton_cb)
+        barra.insert(save_button, 7)
+        save_button.show()"""
 
-        caja.show_all()
-        self.set_toolbox(caja)
+        self.set_toolbar_box(toolbox)
+
+        toolbox.show()
 
     def cradio1_valor(self, radio, value):
         self.radio_uno = int(radio.props.value)
@@ -120,8 +132,6 @@ class Activity(activity.Activity):
         journalobj.metadata['title'] = _('Pointillism')
         journalobj.metadata['mime_type'] = 'image/jpeg'
 
-        #file_path = os.path.join(olpcgames.ACTIVITY.get_activity_root(),'instance','pointillism.jpg')
-
         file_path = os.path.join(os.environ['SUGAR_ACTIVITY_ROOT'], 'data', 'pointillism.jpg')
 
         pygame.image.save(image,file_path)
@@ -129,3 +139,4 @@ class Activity(activity.Activity):
         datastore.write(journalobj)
 
         journalobj.destroy()
+
