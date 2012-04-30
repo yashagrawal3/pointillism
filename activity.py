@@ -44,6 +44,8 @@ class Activity(activity.Activity):
     def __init__(self, handle):
         activity.Activity.__init__(self, handle)
 
+        self.max_participants = 1
+
         self.radio_uno = 2
         self.radio_dos = 12
 
@@ -56,20 +58,12 @@ class Activity(activity.Activity):
 
     def build_toolbar(self):
 
-        self.max_participants = 1
-        
         toolbox = ToolbarBox()
         activity_button = ActivityToolbarButton(self)
         toolbox.toolbar.insert(activity_button, -1)
         activity_button.show()
 
         barra = toolbox.toolbar
-
-        """toolbar = caja.get_activity_toolbar()
-        toolbar.remove(toolbar.keep)
-        toolbar.keep = None
-        toolbar.remove(toolbar.share)
-        toolbar.share = None"""
 
         separador1 = gtk.SeparatorToolItem()
         separador1.props.draw = True
@@ -105,16 +99,30 @@ class Activity(activity.Activity):
         item4.add(self.cradio2)
         barra.insert(item4, 5)
 
-        """
+        separator1 = gtk.SeparatorToolItem()
+        separator1.props.draw = True
+        separator1.set_expand(False)
+        barra.insert(separator1,6)
+
         save_button = ToolButton('filesave')
         save_button.set_tooltip(_('Save Image'))
         save_button.connect('clicked', self._savebutton_cb)
         barra.insert(save_button, 7)
-        save_button.show()"""
+        save_button.show()
+
+        separator2 = gtk.SeparatorToolItem()
+        separator2.props.draw = False
+        separator2.set_expand(True)
+        barra.insert(separator2,8)
+
+        stop_button = StopButton(self)
+        stop_button.props.accelerator = '<Ctrl>q'
+        barra.insert(stop_button, 9)
+        stop_button.show()
 
         self.set_toolbar_box(toolbox)
 
-        toolbox.show()
+        toolbox.show_all()
 
     def cradio1_valor(self, radio, value):
         self.radio_uno = int(radio.props.value)
