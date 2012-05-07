@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-02-19 04:43-0200\n"
+"POT-Creation-Date: 2012-04-30 00:32-0400\n"
 "PO-Revision-Date: 2012-04-06 01:44+0200\n"
 "Last-Translator: Xin <dram.wang@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,19 +17,18 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Pootle 2.0.5\n"
 
-#: activity/activity.info:2
-#: /home/alan/Documentos/GIT/puntillismo/mainline/activity.py:120
+#: activity/activity.info:2 activity.py:140
 msgid "Pointillism"
 msgstr "点彩画"
 
-#: /home/alan/Documentos/GIT/puntillismo/mainline/activity.py:70
+#: activity.py:74
 msgid "Circles between"
 msgstr "圆圈介于"
 
-#: /home/alan/Documentos/GIT/puntillismo/mainline/activity.py:85
+#: activity.py:89
 msgid "and"
 msgstr "和"
 
-#: /home/alan/Documentos/GIT/puntillismo/mainline/activity.py:99
+#: activity.py:108
 msgid "Save Image"
 msgstr "保存图像"
