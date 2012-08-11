@@ -25,14 +25,9 @@
 import os
 import sys
 import gtk
-sys.path.insert(0, "lib")
 import random
 import pygame
 from pygame import camera
-
-#import logging
-#log = logging.getLogger( 'Pointillism run' )
-#log.setLevel( logging.ERROR )
 
 class Puntillism():
 
