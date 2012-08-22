@@ -26,8 +26,11 @@ import os
 import sys
 import gtk
 import random
-import pygame
-from pygame import camera
+try:
+    import pygame
+    from pygame import camera
+except ImportError:
+    print 'Error in import Pygame. This activity requires Pygame 1.9'
 
 class Puntillism():
 
