@@ -6,3 +6,4 @@ exec = sugar-activity activity.Activity
 show_launcher = yes
 icon = activity
 license = GPLv3+
+summary = Creates a pointillist image from the camera captures
