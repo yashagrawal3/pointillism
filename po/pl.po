@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-30 00:32-0400\n"
+"POT-Creation-Date: 2012-09-27 14:56-0400\n"
 "PO-Revision-Date: 2012-04-05 15:24+0200\n"
 "Last-Translator: Marcin <ulinski.marcin@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,18 +18,24 @@ msgstr ""
 "|| n%100>=20) ? 1 : 2);\n"
 "X-Generator: Pootle 2.0.5\n"
 
-#: activity/activity.info:2 activity.py:140
+#. TRANS: "name" option from activity.info file
+#: activity.py:138
 msgid "Pointillism"
 msgstr "Puentylizm"
 
-#: activity.py:74
+#. TRANS: "summary" option from activity.info file
+#. TRANS: "description" option from activity.info file
+msgid "Creates a pointillist image from the camera captures"
+msgstr ""
+
+#: activity.py:72
 msgid "Circles between"
 msgstr "Okręgi między"
 
-#: activity.py:89
+#: activity.py:87
 msgid "and"
 msgstr "i"
 
-#: activity.py:108
+#: activity.py:106
 msgid "Save Image"
 msgstr "Zapisz obraz"
