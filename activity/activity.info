@@ -1,6 +1,6 @@
 [Activity]
 name = Pointillism 
-activity_version = 6
+activity_version = 7
 bundle_id = org.laptop.community.Pointillism
 exec = sugar-activity activity.Activity
 show_launcher = yes
