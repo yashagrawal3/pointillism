@@ -8,37 +8,35 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-09-27 14:56-0400\n"
-"PO-Revision-Date: 2016-03-07 23:12+0000\n"
+"PO-Revision-Date: 2016-03-03 04:30+0000\n"
 "Last-Translator: Chris <cjl@sugarlabs.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: ca\n"
+"Language: ibo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Pootle 2.5.1.1\n"
-"X-POOTLE-MTIME: 1457392342.000000\n"
+"X-POOTLE-MTIME: 1456979452.000000\n"
 
 #. TRANS: "name" option from activity.info file
 #: activity.py:138
 msgid "Pointillism"
-msgstr "Puntillisme"
+msgstr "Pointillism"
 
 #. TRANS: "summary" option from activity.info file
 #. TRANS: "description" option from activity.info file
 msgid "Creates a pointillist image from the camera captures"
-msgstr ""
-"Crea una imatge amb la tècnica de puntillisme a partir de captures de la "
-"càmera"
+msgstr "Emepụta a pointillist oyiyi si igwefoto ijido n'agha"
 
 #: activity.py:72
 msgid "Circles between"
-msgstr "Cercles entre"
+msgstr "okirikiri n'etiti"
 
 #: activity.py:87
 msgid "and"
-msgstr "i"
+msgstr "na"
 
 #: activity.py:106
 msgid "Save Image"
-msgstr "Desa la imatge"
+msgstr "zoputa oyiyi"
